@@ -18,6 +18,8 @@ namespace StructuriDeDate.Models.Users
 
         User Password(string pass);
 
+        User Age(int age);
+
         static User Build()
         {
             return new User();

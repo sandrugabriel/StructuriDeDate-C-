@@ -13,13 +13,15 @@ namespace StructuriDeDate.Models.Users
         private string _name;
         private string _email;
         private string _password;
+        private int _age;
 
-        public User(int id, string name, string email, string password)
+        public User(int id, string name, string email, string password, int age)
         {
             _id = id;
             _name = name;
             _email = email;
             _password = password;
+            _age = age;
         }
 
         public User()
@@ -35,6 +37,9 @@ namespace StructuriDeDate.Models.Users
         public void setEmail(string email) { _email = email; }
         public string getPassword() { return _password; }
         public void setPassword(string password) { _password = password; }
+        public int getAge() { return _age; }
+        public void setAge(int age) { _age = age; }
+
 
         public User Id(int id)
         {
@@ -60,6 +65,11 @@ namespace StructuriDeDate.Models.Users
             return this;
         }
 
+        public User Age(int age)
+        {
+            this._age = age;
+            return this;
+        }
 
         public string descriere()
         {
@@ -68,7 +78,7 @@ namespace StructuriDeDate.Models.Users
             t += "Id " + _id.ToString() + "\n";
             t += $"Name {_name} \n";
             t += $"Email {_email} \n";
-
+            t += $"Age {_age} \n";
             return t;
         }
 
@@ -79,7 +89,19 @@ namespace StructuriDeDate.Models.Users
 
         public int CompareTo(User? other)
         {
-            throw new NotImplementedException();
+            if (this._age > other._age)
+            {
+                return 1;
+
+            }
+            else if (this._age < other._age)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

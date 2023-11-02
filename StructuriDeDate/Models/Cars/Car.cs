@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StructuriDeDate.Models.Car
 {
-    public class Car : IBuilderCar
+    public class Car : IBuilderCar, IComparable<Car>
     {
 
         private int _id;
@@ -103,5 +103,21 @@ namespace StructuriDeDate.Models.Car
             return descriere();
         }
 
+        public int CompareTo(Car? other)
+        {
+            if (this._year > other._year)
+            {
+                return 1;
+
+            }
+            else if (this._year < other._year)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
