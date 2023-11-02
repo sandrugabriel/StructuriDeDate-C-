@@ -1,4 +1,4 @@
-﻿using StructuriDeDate.Lista.ListaSimpluInlantuita;
+﻿using StructuriDeDate.ListaSimpluInlantuita;
 using StructuriDeDate.Models.Users;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StructuriDeDate.Lista.ListaSimpluInlantuita.interfaces
+namespace StructuriDeDate.ListaSimpluInlantuita.interfaces
 {
     public interface ILista
     {

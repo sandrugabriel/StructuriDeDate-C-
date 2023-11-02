@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StructuriDeDate.Lista.ListaSimpluInlantuita
+namespace StructuriDeDate.ListaSimpluInlantuita
 {
 
     public class Node
