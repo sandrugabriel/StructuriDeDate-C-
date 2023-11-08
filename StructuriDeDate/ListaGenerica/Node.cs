@@ -13,6 +13,6 @@ namespace StructuriDeDate.ListaGenerica
 
         public T Value { get; set; }
 
-
+        
     }
 }
