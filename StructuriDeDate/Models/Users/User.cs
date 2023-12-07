@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StructuriDeDate.Models.Users
 {
-    public class User : IBuilderUser , IComparable<User>
+    public class User : IComparable<User>, IBuilderUser 
     {
 
         private int _id;
@@ -89,6 +89,7 @@ namespace StructuriDeDate.Models.Users
 
         public int CompareTo(User? other)
         {
+
             if (this._age > other._age)
             {
                 return 1;

@@ -17,7 +17,7 @@ namespace StructuriDeDate.Arborii
         private TreeNode root = null;
 
         public TreeNode getTreeNode() { return root; }
-        
+
         public string find(string cautat)
         {
             TreeNode searched = find(root, cautat);
@@ -31,30 +31,32 @@ namespace StructuriDeDate.Arborii
         private TreeNode find(TreeNode current, String cautat)
         {
 
-           
-            if(current == null) { 
+
+            if (current == null)
+            {
                 return null;
             }
-            else if(current.Data.Equals(cautat))
+            else if (current.Data.Equals(cautat))
             {
                 return current;
             }
-            
-            var left=find(current.Left, cautat);
-            if(left != null)
+
+            var left = find(current.Left, cautat);
+            if (left != null)
             {
                 return left;
             }
 
             return find(current.Right, cautat);
 
-            
+
         }
 
-        public void add(string parinte, string copil) { 
-        
+        public void add(string parinte, string copil)
+        {
 
-            if(find(parinte) == null)
+
+            if (find(parinte) == null)
             {
                 root = new TreeNode();
 
@@ -73,8 +75,9 @@ namespace StructuriDeDate.Arborii
 
                 TreeNode aux = find(root, parinte);
 
-                if(aux.Left == null) { 
-                
+                if (aux.Left == null)
+                {
+
                     aux.Left = nou;
                     return;
                 }
@@ -85,9 +88,9 @@ namespace StructuriDeDate.Arborii
                 }
 
             }
-        
-        
-        
+
+
+
         }
 
         public void afisare()
@@ -110,12 +113,12 @@ namespace StructuriDeDate.Arborii
                 //Console.WriteLine(coada.top().Data) ;
                 treeNode = coada.top();
 
-              //  Console.WriteLine(treeNode.Data);
+                //  Console.WriteLine(treeNode.Data);
 
                 coada.pop();
 
 
-            } while (treeNode !=null);
+            } while (treeNode != null);
 
         }
 

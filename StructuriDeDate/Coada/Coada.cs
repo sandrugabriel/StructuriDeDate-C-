@@ -17,14 +17,23 @@ namespace StructuriDeDate.Coada
         public void pop()
         {
             Node<T> aux = head;
+            if (aux.Next != null)
+            {
+                while (aux.Next.Next != null)
+                {
 
-            while(aux.Next.Next != null) {
-            
-                aux = aux.Next;
+                    aux = aux.Next;
 
+                }
+
+                aux.Next = null;
             }
-
-            aux.Next = null;
+            else
+            {
+                head = new Node<T>();
+            }
+               
+            
            
         }
 

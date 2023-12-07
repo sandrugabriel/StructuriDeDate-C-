@@ -14,7 +14,7 @@ namespace StructuriDeDate.Arborii
 
         public TreeNode Right {  get; set; }
 
-        public int Data { get; set; }
+        public string Data { get; set; }
 
         public int CompareTo(TreeNode? other)
         {
