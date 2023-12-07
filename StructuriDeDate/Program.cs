@@ -1,4 +1,5 @@
-﻿using StructuriDeDate.Arborii;
+﻿using StructuriDeDate.ArboriBinari;
+using StructuriDeDate.Arborii;
 using StructuriDeDate.Coada;
 using StructuriDeDate.Coada.interfaces;
 using StructuriDeDate.ListaGenerica;
@@ -12,11 +13,6 @@ internal class Program
     private static void Main(string[] args)
     {
 
-        User user = new User(1, "test", "test@e.com", "1234", 18);
-        User user2 = new User(2, "test1", "tes1t@e.com", "1234", 19);
-        User user3 = new User(3, "test2", "test2@e.com", "1234", 18);
-        User user4 = new User(4, "test3", "test3@e.com", "1234", 17);
-        User user5 = new User(5, "test4", "test4@e.com", "1234", 20);
 
         //Lista Simplu Inlantuita
         //
@@ -104,29 +100,49 @@ internal class Program
             stiva.afisare();
     */
 
-        Ierarhie ierarhie = new Ierarhie();
-        ierarhie.add("null", "CEO");
-        ierarhie.add("CEO", "Deputy Director");
-        ierarhie.add("Deputy Director","IT");
-        ierarhie.add("Deputy Director", "Marketing");
-        ierarhie.add("IT", "Security");
-        ierarhie.add("IT", "App");
-        ierarhie.add("Marketing", "Logic");
-        ierarhie.add("Marketing", "Relations");
-        /*
-                Console.WriteLine("Right:");
-                Console.WriteLine(ierarhie.getTreeNode().Data);
-                Console.WriteLine(ierarhie.getTreeNode().Right.Data);
-                Console.WriteLine(ierarhie.getTreeNode().Right.Right.Data);
-                Console.WriteLine(ierarhie.getTreeNode().Right.Left.Data);
+        /*        Ierarhie ierarhie = new Ierarhie();
+                ierarhie.add("null", "CEO");
+                ierarhie.add("CEO", "Deputy Director");
+                ierarhie.add("Deputy Director","IT");
+                ierarhie.add("Deputy Director", "Marketing");
+                ierarhie.add("IT", "Security");
+                ierarhie.add("IT", "App");
+                ierarhie.add("Marketing", "Logic");
+                ierarhie.add("Marketing", "Relations");
+                *//*
+                        Console.WriteLine("Right:");
+                        Console.WriteLine(ierarhie.getTreeNode().Data);
+                        Console.WriteLine(ierarhie.getTreeNode().Right.Data);
+                        Console.WriteLine(ierarhie.getTreeNode().Right.Right.Data);
+                        Console.WriteLine(ierarhie.getTreeNode().Right.Left.Data);
 
-                Console.WriteLine("\nLeft:");
-                Console.WriteLine(ierarhie.getTreeNode().Data);
-                Console.WriteLine(ierarhie.getTreeNode().Left.Data);
-                Console.WriteLine(ierarhie.getTreeNode().Left.Right.Data);
-                Console.WriteLine(ierarhie.getTreeNode().Left.Left.Data);*/
+                        Console.WriteLine("\nLeft:");
+                        Console.WriteLine(ierarhie.getTreeNode().Data);
+                        Console.WriteLine(ierarhie.getTreeNode().Left.Data);
+                        Console.WriteLine(ierarhie.getTreeNode().Left.Right.Data);
+                        Console.WriteLine(ierarhie.getTreeNode().Left.Left.Data);*//*
 
-        ierarhie.afisare();
+                ierarhie.afisare();*/
 
+        User user = new User(1, "test", "test@e.com", "1234", 18);
+        User user2 = new User(2, "test1", "tes1t@e.com", "1234", 19);
+        User user3 = new User(3, "test2", "test2@e.com", "1234", 23);
+        User user4 = new User(4, "test3", "test3@e.com", "1234", 17);
+        User user5 = new User(5, "test4", "test4@e.com", "1234", 12);
+
+        ArboriBinari<User> arborebinar = new ArboriBinari<User>();
+        arborebinar.add(user, arborebinar.getNode());
+        arborebinar.add(user2, arborebinar.getNode());
+        arborebinar.add(user3, arborebinar.getNode());
+        arborebinar.add(user4, arborebinar.getNode());
+        arborebinar.add(user5, arborebinar.getNode());
+
+        // arborebinar.afisare();
+
+        User useNull = new User();
+        User usermini = new User(0, "", "", "", 1000);
+
+        arborebinar.maximul(useNull);
+        arborebinar.minimul(usermini);
     }
 }
