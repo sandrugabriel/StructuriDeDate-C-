@@ -123,7 +123,7 @@ namespace StructuriDeDate.ArboriBinari
             Console.WriteLine("User-ul Minim este:\n"+mini.ToString());
         }
 
-        //
+        //Afisarea pe nivel
         public void afisare()
         {
 
@@ -154,6 +154,43 @@ namespace StructuriDeDate.ArboriBinari
 
         }
 
+        //Afisarea in preordine
+        public void afisarePreordine(TreeNode<T> start)
+        {
+
+            if(start != null) {
+                
+               Console.WriteLine(start.Data);            
+
+                afisarePreordine(start.Left);
+                afisarePreordine(start.Right);
+            }
+
+
+
+        }
+
+        //Afisarea in inordine
+        public void afisareiInordine(TreeNode<T> start)
+        {
+            if (start != null)
+            {
+                afisareiInordine(start.Left);
+                Console.WriteLine(start.Data);
+                afisareiInordine(start.Right);
+            }
+        }
+        
+        //Afisarea in postordine
+        public void afisarePostordine(TreeNode<T> start)
+        {
+            if (start != null)
+            {
+                afisarePostordine(start.Left);
+                afisarePostordine(start.Right);
+                Console.WriteLine(start.Data);
+            }
+        }
 
     }
 }

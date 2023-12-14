@@ -124,11 +124,18 @@ internal class Program
 
                 ierarhie.afisare();*/
 
-        User user = new User(1, "test", "test@e.com", "1234", 18);
-        User user2 = new User(2, "test1", "tes1t@e.com", "1234", 19);
-        User user3 = new User(3, "test2", "test2@e.com", "1234", 23);
-        User user4 = new User(4, "test3", "test3@e.com", "1234", 17);
-        User user5 = new User(5, "test4", "test4@e.com", "1234", 12);
+        User user = new User(1, "F", "", "", 18);
+        User user2 = new User(2, "D", "", "", 11);
+        User user3 = new User(3, "J", "", "", 26);
+        User user4 = new User(4, "B", "", "", 7);
+        User user5 = new User(5, "E", "", "", 12);
+        User user6 = new User(6, "G", "", "", 22);
+        User user7 = new User(7, "K", "", "", 29);
+        User user8 = new User(8, "A", "", "", 6);
+        User user9 = new User(9, "C", "", "", 8);
+        User user10 = new User(10, "I", "", "", 25);
+        User user11 = new User(11, "H", "", "", 23);
+
 
         ArboriBinari<User> arborebinar = new ArboriBinari<User>();
         arborebinar.add(user, arborebinar.getNode());
@@ -136,13 +143,31 @@ internal class Program
         arborebinar.add(user3, arborebinar.getNode());
         arborebinar.add(user4, arborebinar.getNode());
         arborebinar.add(user5, arborebinar.getNode());
+        arborebinar.add(user6, arborebinar.getNode());
+        arborebinar.add(user7, arborebinar.getNode());
+        arborebinar.add(user8, arborebinar.getNode());
+        arborebinar.add(user9, arborebinar.getNode());
+        arborebinar.add(user10, arborebinar.getNode());
+        arborebinar.add(user11, arborebinar.getNode());
+
 
         // arborebinar.afisare();
+        /*
+                User useNull = new User();
+                User usermini = new User(0, "", "", "", 1000);
 
-        User useNull = new User();
-        User usermini = new User(0, "", "", "", 1000);
+                arborebinar.maximul(useNull);
+                arborebinar.minimul(usermini);*/
+        Console.WriteLine("\n\nAFISAREA PE NIVELE:\n");
+        arborebinar.afisare();
 
-        arborebinar.maximul(useNull);
-        arborebinar.minimul(usermini);
+        Console.WriteLine("\n\nAFISAREA IN PREORDINE:\n");
+        arborebinar.afisarePreordine(arborebinar.getNode());
+
+        Console.WriteLine("\n\nAFISAREA IN INORDINE:\n");
+        arborebinar.afisareiInordine(arborebinar.getNode());
+
+        Console.WriteLine("\n\nAFISAREA IN POSTORDINE:\n");
+        arborebinar.afisarePostordine(arborebinar.getNode());
     }
 }
