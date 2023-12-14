@@ -75,9 +75,7 @@ namespace StructuriDeDate.Models.Users
         {
             string t = "";
 
-            t += "Id " + _id.ToString() + "\n";
             t += $"Name {_name} \n";
-            t += $"Email {_email} \n";
             t += $"Age {_age} \n";
             return t;
         }
