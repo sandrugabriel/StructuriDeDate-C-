@@ -87,6 +87,10 @@ namespace StructuriDeDate.Models.Users
 
         public int CompareTo(User? other)
         {
+            if(this.Id == other.Id)
+            {
+                return 2;
+            }
 
             if (this._age > other._age)
             {
