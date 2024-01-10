@@ -1,5 +1,6 @@
 ﻿using StructuriDeDate.ArboriBinari;
 using StructuriDeDate.Arborii;
+using StructuriDeDate.ArboriN;
 using StructuriDeDate.Coada;
 using StructuriDeDate.Coada.interfaces;
 using StructuriDeDate.ListaGenerica;
@@ -136,28 +137,30 @@ internal class Program
         User user10 = new User(10, "I", "", "", 25);
         User user11 = new User(11, "H", "", "", 23);
 
-
-        ArboriBinari<User> arborebinar = new ArboriBinari<User>();
-        arborebinar.add(user, arborebinar.getNode());
-        arborebinar.add(user2, arborebinar.getNode());
-        arborebinar.add(user3, arborebinar.getNode());
-        arborebinar.add(user4, arborebinar.getNode());
-        arborebinar.add(user5, arborebinar.getNode());
-        arborebinar.add(user6, arborebinar.getNode());
-        arborebinar.add(user7, arborebinar.getNode());
-        arborebinar.add(user8, arborebinar.getNode());
-        arborebinar.add(user9, arborebinar.getNode());
-        arborebinar.add(user10, arborebinar.getNode());
-        arborebinar.add(user11, arborebinar.getNode());
-
-
-        // arborebinar.afisare();
         /*
-                User useNull = new User();
-                User usermini = new User(0, "", "", "", 1000);
+                ArboriBinari<User> arborebinar = new ArboriBinari<User>();
+                arborebinar.add(user, arborebinar.getNode());
+                arborebinar.add(user2, arborebinar.getNode());
+                arborebinar.add(user3, arborebinar.getNode());
+                arborebinar.add(user4, arborebinar.getNode());
+                arborebinar.add(user5, arborebinar.getNode());
+                arborebinar.add(user6, arborebinar.getNode());
+                arborebinar.add(user7, arborebinar.getNode());
+                arborebinar.add(user8, arborebinar.getNode());
+                arborebinar.add(user9, arborebinar.getNode());
+                arborebinar.add(user10, arborebinar.getNode());
+                arborebinar.add(user11, arborebinar.getNode());
 
-                arborebinar.maximul(useNull);
-                arborebinar.minimul(usermini);*/
+
+                // arborebinar.afisare();
+                *//*
+                        User useNull = new User();
+                        User usermini = new User(0, "", "", "", 1000);
+
+                        arborebinar.maximul(useNull);
+                        arborebinar.minimul(usermini);
+                */
+        /*
         Console.WriteLine("\n\nAFISAREA PE NIVELE:\n");
         arborebinar.afisare();
 
@@ -169,5 +172,20 @@ internal class Program
 
         Console.WriteLine("\n\nAFISAREA IN POSTORDINE:\n");
         arborebinar.afisarePostordine(arborebinar.getNode());
+*/
+
+        ArboriN<User> arboriN = new ArboriN<User>();
+
+        arboriN.Add(null, user);
+        arboriN.Add(user,user2);
+        arboriN.Add(user, user3);
+        arboriN.Add(user, user4);
+        arboriN.Add(user2, user5);
+        arboriN.Add(user2, user6);
+        arboriN.Add(user2, user7);
+
+        arboriN.stergere(user5);
+        arboriN.afisare(arboriN.getNode());
+        //Console.WriteLine(arboriN.getNode().Data[2].Value);
     }
 }
